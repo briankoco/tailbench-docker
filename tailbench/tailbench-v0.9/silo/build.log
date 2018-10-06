@@ -1,0 +1,145 @@
+make -C third-party/lz4 library
+make[1]: Entering directory `/home/cc/src/silo/third-party/lz4'
+rm -f masstree/config.h
+gcc -fPIC -O3 -I. -std=c99 -Wall -W -Wundef -Wno-implicit-function-declaration -c lz4.c -o lz4.o
+cd masstree; ./configure --enable-max-key-len=1024 --disable-assertions --disable-invariants --disable-preconditions --with-malloc=jemalloc
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... gcc -fPIC -O3 -I. -std=c99 -Wall -W -Wundef -Wno-implicit-function-declaration -c xxhash.c -o xxhash.o
+yes
+checking for sys/stat.h... gcc -shared -Wl,-soname,liblz4.so -o liblz4.so lz4.o xxhash.o
+yes
+checking for stdlib.h... make[1]: Leaving directory `/home/cc/src/silo/third-party/lz4'
+yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking sys/epoll.h usability... yes
+checking sys/epoll.h presence... yes
+checking for sys/epoll.h... yes
+checking numa.h usability... yes
+checking numa.h presence... yes
+checking for numa.h... yes
+checking for library containing numa_available... -lnuma
+checking for __builtin_clz builtin... yes
+checking for __builtin_clzl builtin... yes
+checking for __builtin_clzll builtin... yes
+checking for __builtin_ctz builtin... yes
+checking for __builtin_ctzl builtin... yes
+checking for __builtin_ctzll builtin... yes
+checking for __sync_synchronize builtin... yes
+checking for __sync_fetch_and_add builtin... yes
+checking for __sync_add_and_fetch builtin... yes
+checking for __sync_fetch_and_add_8 builtin... yes
+checking for __sync_add_and_fetch_8 builtin... yes
+checking for __sync_fetch_and_or builtin... yes
+checking for __sync_or_and_fetch builtin... yes
+checking for __sync_fetch_and_or_8 builtin... yes
+checking for __sync_or_and_fetch_8 builtin... yes
+checking for __sync_bool_compare_and_swap builtin... yes
+checking for __sync_bool_compare_and_swap_8 builtin... yes
+checking for __sync_val_compare_and_swap builtin... yes
+checking for __sync_val_compare_and_swap_8 builtin... yes
+checking for __sync_lock_test_and_set builtin... yes
+checking for __sync_lock_test_and_set_val builtin... yes
+checking for __sync_lock_release_set builtin... yes
+checking whether the C++ compiler understands 'auto'... no
+checking whether the C++ compiler with -std=gnu++0x understands 'auto'... yes
+checking whether the C++ compiler understands constexpr... yes
+checking whether the C++ compiler understands static_assert... yes
+checking whether the C++ compiler understands rvalue references... yes
+checking whether the C++ compiler understands template alias... yes
+checking type_traits usability... yes
+checking type_traits presence... no
+checking for type_traits... yes
+checking for std::hash... yes
+checking for __has_trivial_copy... yes
+checking for std::move... yes
+checking for std::is_trivially_copyable... no
+checking for std::is_rvalue_reference... yes
+checking for malloc in -lflow... no
+checking for mallctl in -ljemalloc... yes
+checking for tc_malloc in -ltcmalloc_minimal... yes
+checking for _Z16getMainHoardHeapv in -lhoard... no
+checking for malloc library... -ljemalloc
+checking whether off_t and long are the same type... yes
+checking whether off_t and long long are the same type... no
+checking whether int64_t and long are the same type... yes
+checking whether int64_t and long long are the same type... no
+checking whether size_t and unsigned are the same type... no
+checking whether size_t and unsigned long are the same type... yes
+checking whether size_t and unsigned long long are the same type... no
+checking for long long... yes
+checking size of short... 2
+checking size of int... 4
+checking size of long... 8
+checking size of long long... 8
+checking size of void *... 8
+checking whether getline is declared... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking execinfo.h usability... yes
+checking execinfo.h presence... yes
+checking for execinfo.h... yes
+checking whether clock_gettime is declared... yes
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking whether MADV_HUGEPAGE is supported... yes
+checking whether MAP_HUGETLB is supported... yes
+configure: creating ./config.status
+config.status: creating GNUmakefile
+config.status: creating config.h
+if test -f masstree/config.h; then touch masstree/config.h; fi
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c test.cc -o out-perf.masstree/test.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c allocator.cc -o out-perf.masstree/allocator.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c btree.cc -o out-perf.masstree/btree.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c core.cc -o out-perf.masstree/core.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c counter.cc -o out-perf.masstree/counter.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c memory.cc -o out-perf.masstree/memory.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c rcu.cc -o out-perf.masstree/rcu.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c thread.cc -o out-perf.masstree/thread.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c stats_server.cc -o out-perf.masstree/stats_server.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c ticker.cc -o out-perf.masstree/ticker.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c tuple.cc -o out-perf.masstree/tuple.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c txn_btree.cc -o out-perf.masstree/txn_btree.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c txn.cc -o out-perf.masstree/txn.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c txn_proto2_impl.cc -o out-perf.masstree/txn_proto2_impl.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c varint.cc -o out-perf.masstree/varint.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -include masstree/config.h -c masstree/compiler.cc -o out-perf.masstree/compiler.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -include masstree/config.h -c masstree/str.cc -o out-perf.masstree/str.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -include masstree/config.h -c masstree/string.cc -o out-perf.masstree/string.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -include masstree/config.h -c masstree/straccum.cc -o out-perf.masstree/straccum.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -include masstree/config.h -c masstree/json.cc -o out-perf.masstree/json.o
+g++ -o out-perf.masstree/test out-perf.masstree/test.o out-perf.masstree/allocator.o out-perf.masstree/btree.o out-perf.masstree/core.o out-perf.masstree/counter.o out-perf.masstree/memory.o out-perf.masstree/rcu.o out-perf.masstree/stats_server.o out-perf.masstree/thread.o out-perf.masstree/ticker.o out-perf.masstree/tuple.o out-perf.masstree/txn_btree.o out-perf.masstree/txn.o out-perf.masstree/txn_proto2_impl.o out-perf.masstree/varint.o out-perf.masstree/compiler.o out-perf.masstree/str.o out-perf.masstree/string.o out-perf.masstree/straccum.o out-perf.masstree/json.o third-party/lz4/liblz4.so -lpthread -lnuma -lrt -ljemalloc -Lthird-party/lz4 -llz4 -Wl,-rpath,/home/cc/src/silo/third-party/lz4
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -DNO_MYSQL -I../harness -c benchmarks/dbtest.cc -o out-perf.masstree/benchmarks/dbtest.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -DNO_MYSQL -I../harness -c benchmarks/client.cc -o out-perf.masstree/benchmarks/client.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -DNO_MYSQL -I../harness -c benchmarks/bdb_wrapper.cc -o out-perf.masstree/benchmarks/bdb_wrapper.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -DNO_MYSQL -I../harness -c benchmarks/bench.cc -o out-perf.masstree/benchmarks/bench.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -DNO_MYSQL -I../harness -c benchmarks/encstress.cc -o out-perf.masstree/benchmarks/encstress.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -DNO_MYSQL -I../harness -c benchmarks/bid.cc -o out-perf.masstree/benchmarks/bid.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -DNO_MYSQL -I../harness -c benchmarks/masstree/kvrandom.cc -o out-perf.masstree/benchmarks/masstree/kvrandom.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -DNO_MYSQL -I../harness -c benchmarks/queue.cc -o out-perf.masstree/benchmarks/queue.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -DNO_MYSQL -I../harness -c benchmarks/tpcc.cc -o out-perf.masstree/benchmarks/tpcc.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -DNO_MYSQL -I../harness -c benchmarks/ycsb.cc -o out-perf.masstree/benchmarks/ycsb.o
+g++ -o out-perf.masstree/benchmarks/dbtest_client_networked out-perf.masstree/benchmarks/client.o ../harness/client.o ../harness/tbench_client_networked.o third-party/lz4/liblz4.so -lpthread -lnuma -lrt -ljemalloc -ldb_cxx -lz -lrt -lcrypt -laio -ldl -lssl -lcrypto -Lthird-party/lz4 -llz4 -Wl,-rpath,/home/cc/src/silo/third-party/lz4
+g++ -o out-perf.masstree/benchmarks/dbtest_integrated out-perf.masstree/benchmarks/dbtest.o out-perf.masstree/benchmarks/client.o out-perf.masstree/allocator.o out-perf.masstree/btree.o out-perf.masstree/core.o out-perf.masstree/counter.o out-perf.masstree/memory.o out-perf.masstree/rcu.o out-perf.masstree/stats_server.o out-perf.masstree/thread.o out-perf.masstree/ticker.o out-perf.masstree/tuple.o out-perf.masstree/txn_btree.o out-perf.masstree/txn.o out-perf.masstree/txn_proto2_impl.o out-perf.masstree/varint.o out-perf.masstree/compiler.o out-perf.masstree/str.o out-perf.masstree/string.o out-perf.masstree/straccum.o out-perf.masstree/json.o out-perf.masstree/benchmarks/bdb_wrapper.o out-perf.masstree/benchmarks/bench.o out-perf.masstree/benchmarks/encstress.o out-perf.masstree/benchmarks/bid.o out-perf.masstree/benchmarks/masstree/kvrandom.o out-perf.masstree/benchmarks/queue.o out-perf.masstree/benchmarks/tpcc.o out-perf.masstree/benchmarks/ycsb.o ../harness/client.o ../harness/tbench_server_integrated.o third-party/lz4/liblz4.so -lpthread -lnuma -lrt -ljemalloc -ldb_cxx -lz -lrt -lcrypt -laio -ldl -lssl -lcrypto -Lthird-party/lz4 -llz4 -Wl,-rpath,/home/cc/src/silo/third-party/lz4
+g++ -o out-perf.masstree/benchmarks/dbtest_server_networked out-perf.masstree/benchmarks/dbtest.o out-perf.masstree/allocator.o out-perf.masstree/btree.o out-perf.masstree/core.o out-perf.masstree/counter.o out-perf.masstree/memory.o out-perf.masstree/rcu.o out-perf.masstree/stats_server.o out-perf.masstree/thread.o out-perf.masstree/ticker.o out-perf.masstree/tuple.o out-perf.masstree/txn_btree.o out-perf.masstree/txn.o out-perf.masstree/txn_proto2_impl.o out-perf.masstree/varint.o out-perf.masstree/compiler.o out-perf.masstree/str.o out-perf.masstree/string.o out-perf.masstree/straccum.o out-perf.masstree/json.o out-perf.masstree/benchmarks/bdb_wrapper.o out-perf.masstree/benchmarks/bench.o out-perf.masstree/benchmarks/encstress.o out-perf.masstree/benchmarks/bid.o out-perf.masstree/benchmarks/masstree/kvrandom.o out-perf.masstree/benchmarks/queue.o out-perf.masstree/benchmarks/tpcc.o out-perf.masstree/benchmarks/ycsb.o ../harness/tbench_server_networked.o third-party/lz4/liblz4.so -lpthread -lnuma -lrt -ljemalloc -ldb_cxx -lz -lrt -lcrypt -laio -ldl -lssl -lcrypto -Lthird-party/lz4 -llz4 -Wl,-rpath,/home/cc/src/silo/third-party/lz4

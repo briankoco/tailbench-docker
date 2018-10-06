@@ -1,0 +1,33 @@
+Buildfile: /home/cc/src/specjbb/build.xml
+
+init:
+    [mkdir] Created dir: /home/cc/src/specjbb/build
+    [mkdir] Created dir: /home/cc/src/specjbb/build/dist
+    [mkdir] Created dir: /home/cc/src/specjbb/build/tmp
+     [copy] Copying 1 file to /home/cc/src/specjbb/build/dist/xml
+     [copy] Copying 1 file to /home/cc/src/specjbb/build/dist/xml
+     [copy] Copying 1 file to /home/cc/src/specjbb/build/dist
+     [copy] Copying 1 file to /home/cc/src/specjbb/build/dist
+     [copy] Copying 1 file to /home/cc/src/specjbb/build/dist
+     [copy] Copying 1 file to /home/cc/src/specjbb/build/dist
+     [copy] Copying 1 file to /home/cc/src/specjbb/build/dist
+     [copy] Copying 1 file to /home/cc/src/specjbb/build/dist
+     [copy] Copying 1 file to /home/cc/src/specjbb/build/dist
+
+compile:
+    [javac] /home/cc/src/specjbb/build.xml:37: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 63 source files to /home/cc/src/specjbb/build/tmp
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.5
+    [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 4 warnings
+
+dist:
+      [jar] Building jar: /home/cc/src/specjbb/build/dist/jbb.jar
+      [jar] Building jar: /home/cc/src/specjbb/build/dist/check.jar
+
+BUILD SUCCESSFUL
+Total time: 1 second

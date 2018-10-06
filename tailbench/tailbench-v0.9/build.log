@@ -1,0 +1,9 @@
+Building harness
+/home/cc/src
+Building img-dnn
+WARNING: Building img-dnn returned error status 2
+/home/cc/src
+Building masstree
+WARNING: Building masstree returned error status 2
+/home/cc/src
+Building moses

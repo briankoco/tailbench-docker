@@ -1,0 +1,11 @@
+export PKG_CONFIG_PATH=/home/cc/src/sphinx/sphinx-install/lib/pkgconfig && \
+g++ `pkg-config --cflags pocketsphinx sphinxbase` \
+client.cpp -c -o client.o -DMODELDIR=\"`pkg-config --variable=modeldir pocketsphinx`\" `pkg-config --cflags --libs pocketsphinx sphinxbase` -I../harness -g -O3 -std=c++0x
+export PKG_CONFIG_PATH=/home/cc/src/sphinx/sphinx-install/lib/pkgconfig && \
+g++ `pkg-config --cflags pocketsphinx sphinxbase` decoder.cpp -c -o decoder.o -DMODELDIR=\"`pkg-config --variable=modeldir pocketsphinx`\" `pkg-config --cflags --libs pocketsphinx sphinxbase` -I../harness -g -O3 -std=c++0x
+export PKG_CONFIG_PATH=/home/cc/src/sphinx/sphinx-install/lib/pkgconfig && \
+g++ client.o ../harness/client.o ../harness/tbench_server_integrated.o decoder.o -o decoder_integrated `pkg-config --libs pocketsphinx sphinxbase` -pthread -lrt
+export PKG_CONFIG_PATH=/home/cc/src/sphinx/sphinx-install/lib/pkgconfig && \
+g++ ../harness/tbench_server_networked.o decoder.o -o decoder_server_networked `pkg-config --libs pocketsphinx sphinxbase` -pthread -lrt 
+export PKG_CONFIG_PATH=/home/cc/src/sphinx/sphinx-install/lib/pkgconfig && \
+g++ client.o ../harness/client.o ../harness/tbench_client_networked.o -o decoder_client_networked `pkg-config --libs pocketsphinx sphinxbase`-pthread -lrt 

@@ -1,0 +1,3 @@
+rm -f mtd mtclient mttest_integrated mttest_server_networked \
+   mttest_client_networkedtest_string test_atomics *.o libjson.a
+rm -rf .deps

@@ -1,0 +1,202 @@
+Making clean in src
+make[1]: Entering directory `/home/cc/src/shore/shore-mt/src'
+Making clean in atomic_ops
+make[2]: Entering directory `/home/cc/src/shore/shore-mt/src/atomic_ops'
+make[3]: Entering directory `/home/cc/src/shore/shore-mt'
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in atomic_ops
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/atomic_ops/atomic_ops'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in .
+make[4]: Entering directory `/home/cc/src/shore/shore-mt/src/atomic_ops/atomic_ops'
+make[5]: Entering directory `/home/cc/src/shore/shore-mt'
+make[5]: Leaving directory `/home/cc/src/shore/shore-mt'
+rm -f    
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt/src/atomic_ops/atomic_ops'
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/atomic_ops/atomic_ops'
+Making clean in asm_linkage
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in usr
+make[4]: Entering directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage/usr'
+make[5]: Entering directory `/home/cc/src/shore/shore-mt'
+make[5]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in src
+make[5]: Entering directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage/usr/src'
+make[6]: Entering directory `/home/cc/src/shore/shore-mt'
+make[6]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in .
+make[6]: Entering directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage/usr/src'
+make[7]: Entering directory `/home/cc/src/shore/shore-mt'
+make[7]: Leaving directory `/home/cc/src/shore/shore-mt'
+rm -f    
+make[6]: Leaving directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage/usr/src'
+make[5]: Leaving directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage/usr/src'
+Making clean in .
+make[5]: Entering directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage/usr'
+make[6]: Entering directory `/home/cc/src/shore/shore-mt'
+make[6]: Leaving directory `/home/cc/src/shore/shore-mt'
+rm -f    
+make[5]: Leaving directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage/usr'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage/usr'
+Making clean in .
+make[4]: Entering directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage'
+make[5]: Entering directory `/home/cc/src/shore/shore-mt'
+make[5]: Leaving directory `/home/cc/src/shore/shore-mt'
+rm -f    
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage'
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/atomic_ops/asm_linkage'
+Making clean in .
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/atomic_ops'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "libatomic_ops.a" || rm -f libatomic_ops.a
+rm -f    
+rm -f *.o
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/atomic_ops'
+make[2]: Leaving directory `/home/cc/src/shore/shore-mt/src/atomic_ops'
+Making clean in fc
+make[2]: Entering directory `/home/cc/src/shore/shore-mt/src/fc'
+make[3]: Entering directory `/home/cc/src/shore/shore-mt'
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in tests
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/fc/tests'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "list1 list2 list3 hash1 hash2 ntime darray memblock heap rc errlogtest random stats stats2 box io ss rand container cuckoo findprime findsizes bitvector basic_sizes" || rm -f list1 list2 list3 hash1 hash2 ntime darray memblock heap rc errlogtest random stats stats2 box io ss rand container cuckoo findprime findsizes bitvector basic_sizes
+rm -f    
+rm -f *.o
+test -z "test_stat_struct_gen.h test_stat_msg_gen.h test_stat_collect_enum_gen.h test_stat_collect_gen.cpp test_stat_dec_gen.cpp test_stat_inc_gen.cpp test_stat_out_gen.cpp" || rm -f test_stat_struct_gen.h test_stat_msg_gen.h test_stat_collect_enum_gen.h test_stat_collect_gen.cpp test_stat_dec_gen.cpp test_stat_inc_gen.cpp test_stat_out_gen.cpp
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/fc/tests'
+Making clean in .
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/fc'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "libfc.a" || rm -f libfc.a
+rm -f    
+rm -f *.o
+test -z "fc_errmsg_gen.h fc_einfo_gen.h fc_error_def_gen.h fc_error_enum_gen.h fc_einfo_bakw_gen.h" || rm -f fc_errmsg_gen.h fc_einfo_gen.h fc_error_def_gen.h fc_error_enum_gen.h fc_einfo_bakw_gen.h
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/fc'
+make[2]: Leaving directory `/home/cc/src/shore/shore-mt/src/fc'
+Making clean in sthread
+make[2]: Entering directory `/home/cc/src/shore/shore-mt/src/sthread'
+make[3]: Entering directory `/home/cc/src/shore/shore-mt'
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in tests
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/sthread/tests'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "thread1 thread2 thread3 thread4 ioperf mmap except pthread_test" || rm -f thread1 thread2 thread3 thread4 ioperf mmap except pthread_test
+rm -f    
+rm -f *.o
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/sthread/tests'
+Making clean in .
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/sthread'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "libsthread.a" || rm -f libsthread.a
+rm -f    
+rm -f *.o
+test -z "  sthread_stats_collect_enum_gen.h sthread_stats_msg_gen.h sthread_stats_struct_gen.h st_errmsg_gen.h st_einfo_gen.h st_error_def_gen.h st_error_enum_gen.h st_einfo_bakw_gen.h   sthread_stats_collect_gen.cpp sthread_stats_dec_gen.cpp sthread_stats_inc_gen.cpp sthread_stats_out_gen.cpp  " || rm -f   sthread_stats_collect_enum_gen.h sthread_stats_msg_gen.h sthread_stats_struct_gen.h st_errmsg_gen.h st_einfo_gen.h st_error_def_gen.h st_error_enum_gen.h st_einfo_bakw_gen.h   sthread_stats_collect_gen.cpp sthread_stats_dec_gen.cpp sthread_stats_inc_gen.cpp sthread_stats_out_gen.cpp  
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/sthread'
+make[2]: Leaving directory `/home/cc/src/shore/shore-mt/src/sthread'
+Making clean in common
+make[2]: Entering directory `/home/cc/src/shore/shore-mt/src/common'
+make[3]: Entering directory `/home/cc/src/shore/shore-mt'
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in tests
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/common/tests'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "bitmap  kvl opaque vectors errcodes lsns mapp latch1" || rm -f bitmap  kvl opaque vectors errcodes lsns mapp latch1
+rm -f    
+rm -f *.o
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/common/tests'
+Making clean in .
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/common'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "libcommon.a" || rm -f libcommon.a
+rm -f    
+rm -f *.o
+test -z "opt_errmsg_gen.h opt_einfo_gen.h opt_error_def_gen.h opt_einfo_bakw_gen.h" || rm -f opt_errmsg_gen.h opt_einfo_gen.h opt_error_def_gen.h opt_einfo_bakw_gen.h
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/common'
+make[2]: Leaving directory `/home/cc/src/shore/shore-mt/src/common'
+Making clean in sm
+make[2]: Entering directory `/home/cc/src/shore/shore-mt/src/sm'
+make[3]: Entering directory `/home/cc/src/shore/shore-mt'
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in smsh
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/sm/smsh'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in lib
+make[4]: Entering directory `/home/cc/src/shore/shore-mt/src/sm/smsh/lib'
+make[5]: Entering directory `/home/cc/src/shore/shore-mt'
+make[5]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in .
+make[5]: Entering directory `/home/cc/src/shore/shore-mt/src/sm/smsh/lib'
+make[6]: Entering directory `/home/cc/src/shore/shore-mt'
+make[6]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "" || rm -f 
+rm -f    
+make[5]: Leaving directory `/home/cc/src/shore/shore-mt/src/sm/smsh/lib'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt/src/sm/smsh/lib'
+Making clean in scripts
+make[4]: Entering directory `/home/cc/src/shore/shore-mt/src/sm/smsh/scripts'
+make[5]: Entering directory `/home/cc/src/shore/shore-mt'
+make[5]: Leaving directory `/home/cc/src/shore/shore-mt'
+Making clean in .
+make[5]: Entering directory `/home/cc/src/shore/shore-mt/src/sm/smsh/scripts'
+make[6]: Entering directory `/home/cc/src/shore/shore-mt'
+make[6]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "" || rm -f 
+rm -f    
+make[5]: Leaving directory `/home/cc/src/shore/shore-mt/src/sm/smsh/scripts'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt/src/sm/smsh/scripts'
+Making clean in .
+make[4]: Entering directory `/home/cc/src/shore/shore-mt/src/sm/smsh'
+make[5]: Entering directory `/home/cc/src/shore/shore-mt'
+make[5]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "smsh random_kick" || rm -f smsh random_kick
+test -z "./log/* ./volumes/*" || rm -f ./log/* ./volumes/*
+rm -f    
+rm -f *.o
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt/src/sm/smsh'
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/sm/smsh'
+Making clean in tests
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/sm/tests'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "file_scan startstop create_rec sort_stream file_scan_many lockid_test lock_cache_test vtable_example rtree_example htab mrbtrees_test	" || rm -f file_scan startstop create_rec sort_stream file_scan_many lockid_test lock_cache_test vtable_example rtree_example htab mrbtrees_test	
+test -z "./log/* ./volumes/*" || rm -f ./log/* ./volumes/*
+rm -f    
+rm -f *.o
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/sm/tests'
+Making clean in .
+make[3]: Entering directory `/home/cc/src/shore/shore-mt/src/sm'
+make[4]: Entering directory `/home/cc/src/shore/shore-mt'
+make[4]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "libsm.a" || rm -f libsm.a
+rm -f    
+rm -f *.o
+test -z "e_errmsg_gen.h e_einfo_gen.h e_error_def_gen.h e_error_enum_gen.h e_einfo_bakw_gen.h sm_stats_t_collect_enum_gen.h sm_stats_t_msg_gen.h sm_stats_t_struct_gen.h  bf_htab_stats_t_collect_enum_gen.h bf_htab_stats_t_msg_gen.h bf_htab_stats_t_struct_gen.h  logfunc_gen.h logtype_gen.h sm_stats_t_collect_gen.cpp sm_stats_t_dec_gen.cpp sm_stats_t_inc_gen.cpp sm_stats_t_out_gen.cpp  bf_htab_stats_t_collect_gen.cpp bf_htab_stats_t_dec_gen.cpp bf_htab_stats_t_inc_gen.cpp bf_htab_stats_t_out_gen.cpp undo_gen.cpp redo_gen.cpp logdef_gen.cpp logstr_gen.cpp logstub_gen.cpp e_error.timestamp logdef.timestamp sm_stats.timestamp" || rm -f e_errmsg_gen.h e_einfo_gen.h e_error_def_gen.h e_error_enum_gen.h e_einfo_bakw_gen.h sm_stats_t_collect_enum_gen.h sm_stats_t_msg_gen.h sm_stats_t_struct_gen.h  bf_htab_stats_t_collect_enum_gen.h bf_htab_stats_t_msg_gen.h bf_htab_stats_t_struct_gen.h  logfunc_gen.h logtype_gen.h sm_stats_t_collect_gen.cpp sm_stats_t_dec_gen.cpp sm_stats_t_inc_gen.cpp sm_stats_t_out_gen.cpp  bf_htab_stats_t_collect_gen.cpp bf_htab_stats_t_dec_gen.cpp bf_htab_stats_t_inc_gen.cpp bf_htab_stats_t_out_gen.cpp undo_gen.cpp redo_gen.cpp logdef_gen.cpp logstr_gen.cpp logstub_gen.cpp e_error.timestamp logdef.timestamp sm_stats.timestamp
+make[3]: Leaving directory `/home/cc/src/shore/shore-mt/src/sm'
+make[2]: Leaving directory `/home/cc/src/shore/shore-mt/src/sm'
+make[2]: Entering directory `/home/cc/src/shore/shore-mt/src'
+rm -f    
+make[2]: Leaving directory `/home/cc/src/shore/shore-mt/src'
+make[1]: Leaving directory `/home/cc/src/shore/shore-mt/src'
+Making clean in config
+make[1]: Entering directory `/home/cc/src/shore/shore-mt/config'
+rm -f    
+make[1]: Leaving directory `/home/cc/src/shore/shore-mt/config'
+make[1]: Entering directory `/home/cc/src/shore/shore-mt'
+test -z "dox/ warnings" || rm -f dox/ warnings
+rm -f    
+make[1]: Leaving directory `/home/cc/src/shore/shore-mt'
+test -z "shore_kits_integrated shore_kits_server_networked shore_kits_client_networked" || rm -f shore_kits_integrated shore_kits_server_networked shore_kits_client_networked
+test -z " lib/libworkload.a  lib/libsm.a lib/libutil.a" || rm -f  lib/libworkload.a  lib/libsm.a lib/libutil.a
+rm -f *.o

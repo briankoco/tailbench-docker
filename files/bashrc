@@ -1,0 +1,15 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+SRC=$HOME/src
+XAPIAN=$SRC/xapian/xapian-core-1.2.13/install
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export PATH
+
+LD_LIBRARY_PATH=/usr/lib64:$XAPIAN/lib
+export LD_LIBRARY_PATH

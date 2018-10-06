@@ -1,0 +1,133 @@
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking sys/epoll.h usability... yes
+checking sys/epoll.h presence... yes
+checking for sys/epoll.h... yes
+checking numa.h usability... yes
+checking numa.h presence... yes
+checking for numa.h... yes
+checking for library containing numa_available... -lnuma
+checking for __builtin_clz builtin... yes
+checking for __builtin_clzl builtin... yes
+checking for __builtin_clzll builtin... yes
+checking for __builtin_ctz builtin... yes
+checking for __builtin_ctzl builtin... yes
+checking for __builtin_ctzll builtin... yes
+checking for __sync_synchronize builtin... yes
+checking for __sync_fetch_and_add builtin... yes
+checking for __sync_add_and_fetch builtin... yes
+checking for __sync_fetch_and_add_8 builtin... yes
+checking for __sync_add_and_fetch_8 builtin... yes
+checking for __sync_fetch_and_or builtin... yes
+checking for __sync_or_and_fetch builtin... yes
+checking for __sync_fetch_and_or_8 builtin... yes
+checking for __sync_or_and_fetch_8 builtin... yes
+checking for __sync_bool_compare_and_swap builtin... yes
+checking for __sync_bool_compare_and_swap_8 builtin... yes
+checking for __sync_val_compare_and_swap builtin... yes
+checking for __sync_val_compare_and_swap_8 builtin... yes
+checking for __sync_lock_test_and_set builtin... yes
+checking for __sync_lock_test_and_set_val builtin... yes
+checking for __sync_lock_release_set builtin... yes
+checking whether the C++ compiler understands 'auto'... no
+checking whether the C++ compiler with -std=gnu++0x understands 'auto'... yes
+checking whether the C++ compiler understands constexpr... yes
+checking whether the C++ compiler understands static_assert... yes
+checking whether the C++ compiler understands rvalue references... yes
+checking whether the C++ compiler understands template alias... yes
+checking type_traits usability... yes
+checking type_traits presence... no
+checking for type_traits... yes
+checking for __has_trivial_copy... yes
+checking for std::move... yes
+checking for std::is_trivially_copyable... no
+checking for std::is_rvalue_reference... yes
+checking for malloc in -lflow... no
+checking for mallctl in -ljemalloc... yes
+checking for tc_malloc in -ltcmalloc_minimal... yes
+checking whether off_t and long are the same type... yes
+checking whether off_t and long long are the same type... no
+checking whether int64_t and long are the same type... yes
+checking whether int64_t and long long are the same type... no
+checking whether size_t and unsigned are the same type... no
+checking whether size_t and unsigned long are the same type... yes
+checking whether size_t and unsigned long long are the same type... no
+checking for long long... yes
+checking size of short... 2
+checking size of int... 4
+checking size of long... 8
+checking size of long long... 8
+checking size of void *... 8
+checking whether getline is declared... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking whether clock_gettime is declared... yes
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+configure: creating ./config.status
+config.status: creating GNUmakefile
+config.status: creating config.h
+config.status: config.h is unchanged
+CONFIG_FILES= /bin/sh ./config.status
+mkdir -p .deps
+touch .deps/stamp
+config.status: creating config.h
+config.status: config.h is unchanged
+echo > stamp-h
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/test_atomics.d -MP -include config.h -c -o test_atomics.o test_atomics.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/string.d -MP -include config.h -c -o string.o string.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/straccum.d -MP -include config.h -c -o straccum.o straccum.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/kvrandom.d -MP -include config.h -c -o kvrandom.o kvrandom.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/json.d -MP -include config.h -c -o json.o json.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/compiler.d -MP -include config.h -c -o compiler.o compiler.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/kvio.d -MP -include config.h -c -o kvio.o kvio.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/mtd.d -MP -include config.h -c -o mtd.o mtd.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/log.d -MP -include config.h -c -o log.o log.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/checkpoint.d -MP -include config.h -c -o checkpoint.o checkpoint.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/file.d -MP -include config.h -c -o file.o file.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/misc.d -MP -include config.h -c -o misc.o misc.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/masstree.d -MP -include config.h -c -o masstree.o masstree.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/value_string.d -MP -include config.h -c -o value_string.o value_string.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/value_array.d -MP -include config.h -c -o value_array.o value_array.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/value_versioned_array.d -MP -include config.h -c -o value_versioned_array.o value_versioned_array.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/perfstat.d -MP -include config.h -c -o perfstat.o perfstat.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/string_slice.d -MP -include config.h -c -o string_slice.o string_slice.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/hashallocator.d -MP -include config.h -c -o hashallocator.o hashallocator.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/clp.d -MP -include config.h -c -o clp.o clp.c
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/kvthread.d -MP -include config.h -c -o kvthread.o kvthread.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/str.d -MP -include config.h -c -o str.o str.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/mtclient.d -MP -include config.h -c -o mtclient.o mtclient.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/mttest.d -MP -include config.h -c -o mttest.o mttest.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -MD -MF .deps/kvclient.d -MP -include config.h -c -o kvclient.o kvclient.cc
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -o mttest_client_networked ../harness/client.o ../harness/tbench_client_networked.o kvclient.o -ltcmalloc_minimal  -lnuma  -lpthread -lm -lrt
+ar cru libjson.a json.o string.o straccum.o hashallocator.o clp.o kvrandom.o compiler.o kvthread.o str.o
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -o test_atomics test_atomics.o string.o straccum.o kvrandom.o json.o compiler.o kvio.o -ltcmalloc_minimal  -lnuma  -lpthread -lm -lrt
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -o mtd mtd.o log.o checkpoint.o file.o misc.o masstree.o value_string.o value_array.o value_versioned_array.o perfstat.o string_slice.o kvio.o libjson.a -ltcmalloc_minimal  -lnuma  -lpthread -lm -lrt
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -o mttest_integrated ../harness/client.o ../harness/tbench_server_integrated.o mttest.o kvclient.o misc.o checkpoint.o masstree.o value_string.o value_array.o value_versioned_array.o perfstat.o string_slice.o kvio.o libjson.a -ltcmalloc_minimal  -lnuma  -lpthread -lm -lrt
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -o mttest_server_networked ../harness/tbench_server_networked.o mttest.o misc.o checkpoint.o masstree.o value_string.o value_array.o value_versioned_array.o perfstat.o string_slice.o kvio.o libjson.a -ltcmalloc_minimal  -lnuma  -lpthread -lm -lrt
+g++ -std=gnu++0x -g -W -Wall -O2 -I../harness -o mtclient mtclient.o misc.o kvio.o libjson.a  -lnuma  -lpthread -lm -lrt
