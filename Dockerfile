@@ -27,15 +27,15 @@ RUN useradd ${USER}
 RUN mkdir ${SSH_DIR}
 
 # ssh key for openmpi
-COPY --chown=cc:cc files/ssh-keys/id_rsa ${SSH_DIR}/id_rsa
-COPY --chown=cc:cc files/ssh-keys/id_rsa.pub ${SSH_DIR}/authorized_keys
-#COPY --chown=cc:cc files/ssh_config ${HOME}/.ssh/config
-#COPY --chown=cc:cc files/hostfile ${HOME}/hostfile
+COPY files/ssh-keys/id_rsa ${SSH_DIR}/id_rsa
+COPY files/ssh-keys/id_rsa.pub ${SSH_DIR}/authorized_keys
+#COPY files/ssh_config ${HOME}/.ssh/config
+#COPY files/hostfile ${HOME}/hostfile
 RUN chmod -R 700 ${SSH_DIR} && chmod -R 600 ${SSH_DIR}/*
 
 # Copy misc stuff 
-COPY --chown=cc:cc files/bashrc ${HOME}/.bashrc
-COPY --chown=cc:cc files/bash_profile ${HOME}/.bash_profile
+COPY files/bashrc ${HOME}/.bashrc
+COPY files/bash_profile ${HOME}/.bash_profile
 
 # sshd setup
 RUN mkdir /var/run/sshd
@@ -55,6 +55,6 @@ RUN mkdir ${HOME}/results
 RUN mkdir ${HOME}/scratch
 RUN chown -R ${USER}:${USER} ${HOME}
 
-# COPY --chown=cc:cc files/tailbench-v0.9 ${HOME}/src
+# COPY files/tailbench-v0.9 ${HOME}/src
 
 ENTRYPOINT ["/usr/sbin/sshd", "-D", "-p", "2222"]
