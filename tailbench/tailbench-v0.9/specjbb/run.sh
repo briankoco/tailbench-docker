@@ -10,13 +10,20 @@ mkdir -p results
 TBENCH_PATH=../harness
 
 export LD_LIBRARY_PATH=${TBENCH_PATH}:${LD_LIBRARY_PATH}
-
 export CLASSPATH=./build/dist/jbb.jar:./build/dist/check.jar:${TBENCH_PATH}/tbench.jar
-
 export PATH=${JDK_PATH}/bin:${PATH}
-export TBENCH_QPS=5000 
-export TBENCH_MAXREQS=25000 
-export TBENCH_WARMUPREQS=25000 
+
+QPS=${QPS:-5000}
+REQUESTS=${REQUESTS:-25000}
+WARMUPREQS=${WARMUPREQS:-25000}
+
+if [ ! -z RANDSEED ] ; then
+    export TBENCH_RANDSEED=$RANDSEED
+fi
+
+export TBENCH_QPS=${QPS} 
+export TBENCH_MAXREQS=${REQUESTS}
+export TBENCH_WARMUPREQS=${WARMUPREQS}
 export TBENCH_MINSLEEPNS=10000
 
 if [[ -d libtbench_jni.so ]] 

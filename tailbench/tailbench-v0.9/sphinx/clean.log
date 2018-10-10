@@ -1,1 +1,2 @@
 rm *.o
+rm decoder_integrated decoder_server_networked decoder_client_networked

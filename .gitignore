@@ -1,3 +1,5 @@
 tailbench/tailbench.inputs.tgz
 tailbench/tailbench.inputs
 tailbench/tailbench-v0.9.tgz
+*.o
+*.so

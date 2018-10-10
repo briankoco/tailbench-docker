@@ -1,8 +1,8 @@
 make -C third-party/lz4 library
-make[1]: Entering directory `/home/cc/src/silo/third-party/lz4'
 rm -f masstree/config.h
-gcc -fPIC -O3 -I. -std=c99 -Wall -W -Wundef -Wno-implicit-function-declaration -c lz4.c -o lz4.o
 cd masstree; ./configure --enable-max-key-len=1024 --disable-assertions --disable-invariants --disable-preconditions --with-malloc=jemalloc
+make[1]: Entering directory `/home/cc/src/silo/third-party/lz4'
+gcc -fPIC -O3 -I. -std=c99 -Wall -W -Wundef -Wno-implicit-function-declaration -c lz4.c -o lz4.o
 checking for gcc... gcc
 checking whether the C compiler works... yes
 checking for C compiler default output file name... a.out
@@ -21,10 +21,10 @@ checking for egrep... /usr/bin/grep -E
 checking for ANSI C header files... yes
 checking for sys/types.h... gcc -fPIC -O3 -I. -std=c99 -Wall -W -Wundef -Wno-implicit-function-declaration -c xxhash.c -o xxhash.o
 yes
-checking for sys/stat.h... gcc -shared -Wl,-soname,liblz4.so -o liblz4.so lz4.o xxhash.o
+checking for sys/stat.h... yes
+checking for stdlib.h... gcc -shared -Wl,-soname,liblz4.so -o liblz4.so lz4.o xxhash.o
 yes
-checking for stdlib.h... make[1]: Leaving directory `/home/cc/src/silo/third-party/lz4'
-yes
+make[1]: Leaving directory `/home/cc/src/silo/third-party/lz4'
 checking for string.h... yes
 checking for memory.h... yes
 checking for strings.h... yes
@@ -116,8 +116,8 @@ g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Wer
 g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c counter.cc -o out-perf.masstree/counter.o
 g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c memory.cc -o out-perf.masstree/memory.o
 g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c rcu.cc -o out-perf.masstree/rcu.o
-g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c thread.cc -o out-perf.masstree/thread.o
 g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c stats_server.cc -o out-perf.masstree/stats_server.o
+g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c thread.cc -o out-perf.masstree/thread.o
 g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c ticker.cc -o out-perf.masstree/ticker.o
 g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c tuple.cc -o out-perf.masstree/tuple.o
 g++ -g -std=c++0x -MD -Ithird-party/lz4 -DCONFIG_H=\"config/config-perf.h\" -Werror -O2 -funroll-loops -fno-omit-frame-pointer -DNDB_MASSTREE -include masstree/config.h -DUSE_JEMALLOC -c txn_btree.cc -o out-perf.masstree/txn_btree.o

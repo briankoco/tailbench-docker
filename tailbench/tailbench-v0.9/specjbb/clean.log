@@ -1,6 +1,7 @@
 Buildfile: /home/cc/src/specjbb/build.xml
 
 clean:
+   [delete] Deleting directory /home/cc/src/specjbb/build
 
 BUILD SUCCESSFUL
 Total time: 0 seconds

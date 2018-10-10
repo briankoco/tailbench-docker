@@ -14,7 +14,7 @@ hostname = murdoc.seas.wustl.edu
 uname -m = x86_64
 uname -r = 4.16.0
 uname -s = Linux
-uname -v = #2 SMP Fri Jul 13 14:12:10 CDT 2018
+uname -v = #1 SMP Thu Apr 12 20:25:13 CDT 2018
 
 /usr/bin/uname -p = x86_64
 /bin/uname -X     = unknown

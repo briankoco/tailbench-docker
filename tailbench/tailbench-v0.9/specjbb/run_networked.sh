@@ -10,14 +10,20 @@ mkdir -p results
 TBENCH_PATH=../harness
 
 export LD_LIBRARY_PATH=${TBENCH_PATH}:${LD_LIBRARY_PATH}
-
 export CLASSPATH=./build/dist/jbb.jar:./build/dist/check.jar:${TBENCH_PATH}/tbench.jar
-
 export PATH=${JDK_PATH}/bin:${PATH}
 
-export TBENCH_QPS=2000 
-export TBENCH_MAXREQS=25000 
-export TBENCH_WARMUPREQS=25000 
+QPS=${QPS:-5000}
+REQUESTS=${REQUESTS:-25000}
+WARMUPREQS=${WARMUPREQS:-25000}
+
+if [ ! -z RANDSEED ] ; then
+    export TBENCH_RANDSEED=$RANDSEED
+fi
+
+export TBENCH_QPS=${QPS} 
+export TBENCH_MAXREQS=${REQUESTS}
+export TBENCH_WARMUPREQS=${WARMUPREQS}
 export TBENCH_MINSLEEPNS=10000
 
 if [[ -d libtbench_jni.so ]] 
@@ -26,7 +32,7 @@ then
 fi
 ln -sf libtbench_networked_jni.so libtbench_jni.so
 
-chrt -r 99 ${JDK_PATH}/bin/java -Djava.library.path=. -XX:ParallelGCThreads=1 \
+${JDK_PATH}/bin/java -Djava.library.path=. -XX:ParallelGCThreads=1 \
     -XX:+UseSerialGC -XX:NewRatio=1 -XX:NewSize=7000m -Xloggc:gc.log \
     -Xms10000m -Xmx10000m -Xrs spec.jbb.JBBmain -propfile SPECjbb_mt.props &
 
@@ -34,7 +40,7 @@ echo $! > server.pid
 
 sleep 10
 
-chrt -r 99 ./client &
+./client &
 echo $! > client.pid
 
 wait $(cat client.pid)
