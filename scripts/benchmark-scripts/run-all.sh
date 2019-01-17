@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ts="$(date +"%Y-%H-%M-%S")-results"
+ts="$(date +"%Y-%m-%d-%H-%M-%S")-results"
 mkdir -p $ts
 
 run_exp() {
@@ -11,11 +11,11 @@ run_exp() {
     mv $log *-lats.txt $dirname
 }
 
-run_exp ./run-xapian.sh $ts
-run_exp ./run-masstree.sh $ts
-run_exp ./run-moses.sh $ts
-run_exp ./run-sphinx.sh $ts
-run_exp ./run-img-dnn.sh $ts
-run_exp ./run-specjbb.sh $ts
-run_exp ./run-silo.sh $ts
-run_exp ./run-shore.sh $ts
+HOSTNAME=192.168.120.10 run_exp ./run-xapian.sh $ts
+HOSTNAME=192.168.120.10 run_exp ./run-masstree.sh $ts
+HOSTNAME=192.168.120.10 run_exp ./run-moses.sh $ts
+HOSTNAME=192.168.120.10 run_exp ./run-sphinx.sh $ts
+HOSTNAME=192.168.120.10 run_exp ./run-img-dnn.sh $ts
+HOSTNAME=192.168.120.10 run_exp ./run-specjbb.sh $ts
+HOSTNAME=192.168.120.10 run_exp ./run-silo.sh $ts
+HOSTNAME=192.168.120.10 run_exp ./run-shore.sh $ts

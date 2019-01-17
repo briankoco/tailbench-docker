@@ -1,0 +1,20 @@
+{
+    "path"     : "/home/cc/src/masstree",
+
+    "server" : {
+        "exe" : "mttest_server_networked",
+        "argv" : ["-j", "1", "mycsba", "masstree"],
+        "envp" : {
+            "TBENCH_MAXREQS"    : 3000,
+            "TBENCH_WARMUPREQS" : 4000
+        }
+    },
+
+    "client" : {
+        "exe" : "mttest_client_networked",
+        "argv" : [],
+        "envp" : {
+            "TBENCH_QPS" : 1000
+        }
+    }
+}

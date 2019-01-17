@@ -5,6 +5,8 @@ ENV USER cc
 ENV HOME /home/${USER}
 ENV SSH_DIR ${HOME}/.ssh
 ENV JAVA_HOME /etc/elternatives/jre
+ENV PATH "/usr/lib64/openmpi/bin:${PATH}"
+ENV LD_LIBRARY_PATH "/usr/lib64/openmpi/lib"
 
 RUN yum -y install epel-release && yum -y update
 RUN yum -y install openssh-server openssh-clients \
@@ -13,7 +15,7 @@ RUN yum -y install openssh-server openssh-clients \
            java-1.8.0-openjdk java-1.8.0-openjdk-devel \
            zlib-devel libuuid-devel opencv-devel jemalloc-devel numactl-devel \
            libdb-cxx-devel libaio-devel openssl-devel readline-devel \
-           libgtop2-devel glib-devel
+           libgtop2-devel glib-devel python python-devel python-pip openmpi-devel
 
 # Install boost (from SO:
 #   https://stackoverflow.com/questions/33050113/how-to-install-boost-devel-1-59-in-centos7
@@ -21,6 +23,9 @@ RUN yum -y install openssh-server openssh-clients \
 RUN wget ftp://fr2.rpmfind.net/linux/Mandriva/official/2010.0/x86_64/media/main/release/lib64icu42-4.2.1-1mdv2010.0.x86_64.rpm && \
     rpm -ivh lib64icu42-4.2.1-1mdv2010.0.x86_64.rpm && \
     yum -y install boost-devel
+
+# Install py4mpi
+RUN pip install --upgrade pip mpi4py
 
 # User creation
 RUN useradd ${USER}
@@ -53,8 +58,9 @@ RUN mkdir ${HOME}/src
 RUN mkdir ${HOME}/data
 RUN mkdir ${HOME}/results
 RUN mkdir ${HOME}/scratch
-RUN chown -R ${USER}:${USER} ${HOME}
+RUN mkdir ${HOME}/tailbench-dist
+COPY tailbench-dist/* ${HOME}/tailbench-dist/
 
-# COPY files/tailbench-v0.9 ${HOME}/src
+RUN chown -R ${USER}:${USER} ${HOME}
 
 ENTRYPOINT ["/usr/sbin/sshd", "-D", "-p", "2222"]

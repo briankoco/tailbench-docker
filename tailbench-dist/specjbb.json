@@ -1,0 +1,39 @@
+{
+    "path"     : "/home/cc/src/specjbb",
+
+    "server" : {
+        "exe" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/bin/java",
+        "argv" : ["-Djava.library.path=.", 
+                  "-XX:ParallelGCThreads=1",
+                  "-XX:+UseSerialGC",
+                  "-XX:NewRatio=1",
+                  "-XX:NewSize=7000m",
+                  "-Xloggc:gc.log",
+                  "-Xms10000m",
+                  "-Xmx10000m",
+                  "-Xrs",
+                  "spec.jbb.JBBmain",
+                  "-propfile",
+                  "SPECjbb_mt.props"
+                 ],
+
+        "envp" : {
+            "TBENCH_MAXREQS"    : 50000,
+            "TBENCH_WARMUPREQS" : 1000,
+            "LD_LIBRARY_PATH"   : "/home/cc/src/harness",
+            "CLASSPATH"         : "./build/dist/jbb.jar:./build/dist/check.jar:/home/cc/src/harness/tbench.jar",
+            "PATH"              : "/usr/lib/jvm/java-1.8.0.191.b12-1.el7_6.x86_64/bin/java/bin"
+        }
+    },
+
+    "client" : {
+        "exe" : "client",
+        "argv" : [],
+        "envp" : {
+            "TBENCH_QPS"        : 7500,
+            "LD_LIBRARY_PATH"   : "/home/cc/src/harness",
+            "CLASSPATH"         : "./build/dist/jbb.jar:./build/dist/check.jar:/home/cc/src/harness/tbench.jar",
+            "PATH"              : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/bin/java/bin"
+        }
+    }
+}

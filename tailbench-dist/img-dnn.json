@@ -1,0 +1,23 @@
+{
+    "path"     : "/home/cc/src/img-dnn",
+
+    "server" : {
+        "exe" : "img-dnn_server_networked",
+        "argv" : ["-r", "1", "-f", "/home/cc/data/img-dnn/models/model.xml", "-n", 100000000],
+        "envp" : {
+            "_TBENCH_MAXREQS"    : 200000,
+            "_TBENCH_WARMUPREQS" : 5000,
+            "TBENCH_MAXREQS"    : 4000,
+            "TBENCH_WARMUPREQS" : 100
+        }
+    },
+
+    "client" : {
+        "exe" : "img-dnn_client_networked",
+        "argv" : [],
+        "envp" : {
+            "TBENCH_QPS"        : 1200,
+            "TBENCH_MNIST_DIR"  : "/home/cc/data/img-dnn/mnist"
+        }
+    }
+}

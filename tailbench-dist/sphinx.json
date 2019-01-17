@@ -1,0 +1,24 @@
+{
+    "path"     : "/home/cc/src/sphinx",
+
+    "server" : {
+        "exe" : "decoder_server_networked",
+        "argv" : ["-t", 1],
+        "envp" : {
+            "TBENCH_MAXREQS"    : 3,
+            "TBENCH_WARMUPREQS" : 1,
+            "LD_LIBRARY_PATH"   : "/home/cc/src/sphinx/sphinx-install/lib"
+        }
+    },
+
+    "client" : {
+        "exe" : "decoder_client_networked",
+        "argv" : [],
+        "envp" : {
+            "TBENCH_QPS"            : 1,
+            "TBENCH_AN4_CORPUS"     : "/home/cc/data/sphinx/",
+            "TBENCH_AUDIO_SAMPLES"  : "/home/cc/src/sphinx/audio_samples",
+            "LD_LIBRARY_PATH"       : "/home/cc/src/sphinx/sphinx-install/lib"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "path"     : "/home/cc/src/xapian",
+
+    "server" : {
+        "exe" : "xapian_networked_server",
+        "argv" : ["-n", "1", "-d", "/home/cc/data/xapian/wiki", "-r", 1000000000],
+        "envp" : {
+            "TBENCH_MAXREQS"    : 100000,
+            "TBENCH_WARMUPREQS" : 1000
+        }
+    },
+
+    "client" : {
+        "exe" : "xapian_networked_client",
+        "argv" : [],
+        "envp" : {
+            "TBENCH_QPS"        : 500,
+            "TBENCH_TERMS_FILE" : "/home/cc/data/xapian/wiki/terms.in"
+        }
+    }
+}

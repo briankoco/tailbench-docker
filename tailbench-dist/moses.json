@@ -1,0 +1,24 @@
+{
+    "path"     : "/home/cc/src/moses",
+
+    "server" : {
+        "exe" : "bin/moses_server_networked",
+        "argv" : ["-config", "/home/cc/src/moses/moses.ini", 
+                  "-input-file", "/home/cc/data/moses/testTerms", 
+                  "-threads", 1, "-num-tasks", 50000,
+                  "-verbose", 0
+                 ],
+        "envp" : {
+            "TBENCH_MAXREQS"    : 15000,
+            "TBENCH_WARMUPREQS" : 10000
+        }
+    },
+
+    "client" : {
+        "exe" : "bin/moses_client_networked",
+        "argv" : [],
+        "envp" : {
+            "TBENCH_QPS"        : 500
+        }
+    }
+}

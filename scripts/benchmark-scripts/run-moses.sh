@@ -5,7 +5,7 @@ BENCH_DIR="src/moses"
 # Change any options before sourcing config
 # This runs for about 3 min
 ##REQS=100000
-WARMUP_REQS=5000
+WARMUP_REQS=50000
 REQS=75000
 QPS=500
 source config.sh

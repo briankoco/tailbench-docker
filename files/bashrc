@@ -7,9 +7,10 @@ fi
 
 SRC=$HOME/src
 XAPIAN=$SRC/xapian/xapian-core-1.2.13/install
+OMPI=/usr/lib64/openmpi
 
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:$OMPI/bin
 export PATH
 
-LD_LIBRARY_PATH=/usr/lib64:$XAPIAN/lib
+LD_LIBRARY_PATH=/usr/lib64:$XAPIAN/lib:$OMPI/lib
 export LD_LIBRARY_PATH
