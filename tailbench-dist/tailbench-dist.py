@@ -127,6 +127,9 @@ def start_server(config_data):
     _envp = server_data["envp"]
 
     # parse the user provided env, overriding defaults if present
+    for e in os.environ:
+        TBENCH_SERVER_ENV[e] = os.environ[e]
+
     for e in _envp:
         TBENCH_SERVER_ENV[e] = update_env_val(e, _envp[e])
 
@@ -155,6 +158,9 @@ def start_client(config_data):
     _envp = client_data["envp"]
 
     # parse the user provided env, overriding defaults if present
+    for e in os.environ:
+        TBENCH_CLIENT_ENV[e] = os.environ[e]
+
     for e in _envp:
         TBENCH_CLIENT_ENV[e] = update_env_val(e, _envp[e])
 
