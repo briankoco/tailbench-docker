@@ -34,7 +34,7 @@ RUN mkdir ${SSH_DIR}
 # ssh key for openmpi
 COPY files/ssh-keys/id_rsa ${SSH_DIR}/id_rsa
 COPY files/ssh-keys/id_rsa.pub ${SSH_DIR}/authorized_keys
-#COPY files/ssh_config ${HOME}/.ssh/config
+COPY files/ssh-keys/config ${HOME}/.ssh/config
 #COPY files/hostfile ${HOME}/hostfile
 RUN chmod -R 700 ${SSH_DIR} && chmod -R 600 ${SSH_DIR}/*
 
