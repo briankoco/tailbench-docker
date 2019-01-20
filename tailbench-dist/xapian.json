@@ -15,7 +15,7 @@
         "argv" : [],
         "envp" : {
             "TBENCH_QPS"        : 500,
-            "TBENCH_TERMS_FILE" : "/home/cc/data/xapian/wiki/terms.in"
+            "TBENCH_TERMS_FILE" : "/home/cc/data/xapian/terms.in"
         }
     }
 }
