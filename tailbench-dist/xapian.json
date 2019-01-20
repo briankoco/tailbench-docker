@@ -5,8 +5,8 @@
         "exe" : "xapian_networked_server",
         "argv" : ["-n", "1", "-d", "/home/cc/data/xapian/wiki", "-r", 1000000000],
         "envp" : {
-            "TBENCH_MAXREQS"    : 100000,
-            "TBENCH_WARMUPREQS" : 1000
+            "TBENCH_MAXREQS"    : 5000,
+            "TBENCH_WARMUPREQS" : 500
         }
     },
 
@@ -14,7 +14,7 @@
         "exe" : "xapian_networked_client",
         "argv" : [],
         "envp" : {
-            "TBENCH_QPS"        : 500,
+            "TBENCH_QPS"        : 1000,
             "TBENCH_TERMS_FILE" : "/home/cc/data/xapian/terms.in"
         }
     }
