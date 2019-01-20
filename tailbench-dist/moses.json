@@ -9,8 +9,8 @@
                   "-verbose", 0
                  ],
         "envp" : {
-            "TBENCH_MAXREQS"    : 15000,
-            "TBENCH_WARMUPREQS" : 10000
+            "TBENCH_MAXREQS"    : 5000,
+            "TBENCH_WARMUPREQS" : 500
         }
     },
 
@@ -18,7 +18,7 @@
         "exe" : "bin/moses_client_networked",
         "argv" : [],
         "envp" : {
-            "TBENCH_QPS"        : 500
+            "TBENCH_QPS"        : 1000
         }
     }
 }
