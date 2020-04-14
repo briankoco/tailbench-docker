@@ -11,11 +11,11 @@ run_exp() {
     mv $log *-lats.txt $dirname
 }
 
-HOSTNAME=192.168.120.10 run_exp ./run-xapian.sh $ts
-HOSTNAME=192.168.120.10 run_exp ./run-masstree.sh $ts
-HOSTNAME=192.168.120.10 run_exp ./run-moses.sh $ts
-HOSTNAME=192.168.120.10 run_exp ./run-sphinx.sh $ts
-HOSTNAME=192.168.120.10 run_exp ./run-img-dnn.sh $ts
-HOSTNAME=192.168.120.10 run_exp ./run-specjbb.sh $ts
-HOSTNAME=192.168.120.10 run_exp ./run-silo.sh $ts
-HOSTNAME=192.168.120.10 run_exp ./run-shore.sh $ts
+HOSTNAME=localhost run_exp ./run-xapian.sh $ts
+HOSTNAME=localhost run_exp ./run-masstree.sh $ts
+HOSTNAME=localhost run_exp ./run-moses.sh $ts
+HOSTNAME=localhost run_exp ./run-sphinx.sh $ts
+HOSTNAME=localhost run_exp ./run-img-dnn.sh $ts
+HOSTNAME=localhost run_exp ./run-specjbb.sh $ts
+HOSTNAME=localhost run_exp ./run-silo.sh $ts
+#HOSTNAME=localhost run_exp ./run-shore.sh $ts
